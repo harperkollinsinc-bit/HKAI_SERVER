@@ -1,0 +1,6 @@
+[
+    { "name": "Collins Somtochukwu", "role": "Founder/CEO", "image": "/imgs/ceo.jpeg" },
+    { "name": "Chiwendu Ikeogwu", "role": "CFO", "image": "/imgs/cfo.jpeg" },
+    { "name": "Fidelis Ojinkama", "role": "Assistant CTO", "image": "/imgs/assistant_cto.jpeg" },
+    { "name": "Nnamdi Amaga", "role": "CTO", "image": "/imgs/cto.jpeg" }
+]
