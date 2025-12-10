@@ -6,11 +6,7 @@ const schemaPath = path.join(__dirname, "..", "model", "newSchema.sql")
 
 module.exports = fp(async function (app, opts) {
   await app.register(require("@fastify/postgres"), {
-    user: process.env.DB_USER || "postgres",
-    password: process.env.DB_PASS || "test123/",
-    host: "127.0.0.1",
-    port: 5432,
-    database: "hkai_db",
+    url: process.env.DB_URL,
   });
 
   app.ready(async (err) => {
