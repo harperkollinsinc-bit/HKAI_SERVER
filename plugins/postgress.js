@@ -6,13 +6,13 @@ const schemaPath = path.join(__dirname, "..", "model", "newSchema.sql")
 
 module.exports = fp(async function (app, opts) {
   await app.register(require("@fastify/postgres"), {
-    url: process.env.DB_URL,
+    connectionString: process.env.DB_URL,
   });
 
   app.ready(async (err) => {
     if (err) return app.log.error(err);
 
-    // run the schema scripts
+    // run the schema scripts 
     try {
       app.log.info("🔄 Syncing Database Schema...");
       const sqlQuery = fs.readFileSync(schemaPath, "utf8")
