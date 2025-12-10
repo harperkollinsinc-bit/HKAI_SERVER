@@ -119,8 +119,8 @@ module.exports = async function (app, opts) {
         .setCookie("hkai_access_token", token, {
           path: "/",
           httpOnly: true,
-          secure: process.env.PROD || false,
-          sameSite: "Lax",
+          secure: true,
+          sameSite: "None",
           maxAge: 60 * 60 * 24,
         })
         .success(
