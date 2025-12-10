@@ -68,7 +68,7 @@ module.exports = async function (app, opts) {
       );
 
       reply
-        .setCookie("access_token", token, {
+        .setCookie("hkai_access_token", token, {
           path: "/",
           httpOnly: true,
           secure: true,
